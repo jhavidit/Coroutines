@@ -8,13 +8,14 @@ import com.bumptech.glide.Glide
 import kotlinx.android.synthetic.main.item_layout.view.*
 import tech.jhavidit.coroutinesdemo.R
 import tech.jhavidit.coroutinesdemo.model.ApiUser
+import tech.jhavidit.coroutinesdemo.room.User
 
 class UserAdapter(
-    private val users: ArrayList<ApiUser>
+    private val users: ArrayList<User>
 ) : RecyclerView.Adapter<UserAdapter.DataViewHolder>() {
 
     class DataViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        fun bind(user: ApiUser) {
+        fun bind(user: User) {
             itemView.textViewUserName.text = user.name
             itemView.textViewUserEmail.text = user.email
             Glide.with(itemView.imageViewAvatar.context)
@@ -36,7 +37,7 @@ class UserAdapter(
     override fun onBindViewHolder(holder: DataViewHolder, position: Int) =
         holder.bind(users[position])
 
-    fun addData(list: List<ApiUser>) {
+    fun addData(list: List<User>) {
         users.addAll(list)
     }
 

@@ -12,6 +12,24 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CoroutinesDemo">
         <activity
+            android:name=".view.errorHandling.ignoreErrorAndContinue.IgnoreErrorAndContinueActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.errorHandling.exceptionHandler.ExceptionHandlerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.timeOut.TimeOutActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.longRunningTwoTask.LongRunningTwoTaskActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.longRunningOneTask.LongRunningOneTaskActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.room.RoomDBActivity"
+            android:exported="false" />
+        <activity
             android:name=".view.seriesNetworkCall.SeriesNetworkCallActivity"
             android:exported="false" />
         <activity

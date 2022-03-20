@@ -1,4 +1,4 @@
-package tech.jhavidit.coroutinesdemo.view.seriesNetworkCall
+package tech.jhavidit.coroutinesdemo.view.errorHandling.exceptionHandler
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -20,8 +20,8 @@ import tech.jhavidit.coroutinesdemo.util.ViewModelFactory
 import tech.jhavidit.coroutinesdemo.view.adapter.ApiUserAdapter
 import tech.jhavidit.coroutinesdemo.view.parallelNetworkCall.ParallelNetworkCallViewModel
 
-class SeriesNetworkCallActivity : AppCompatActivity() {
-    private lateinit var viewModel: SeriesNetworkCallViewModel
+class ExceptionHandlerActivity : AppCompatActivity() {
+    private lateinit var viewModel: ExceptionHandlerViewModel
     private lateinit var adapter: ApiUserAdapter
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,6 +30,7 @@ class SeriesNetworkCallActivity : AppCompatActivity() {
         initAdapter()
         setUpObserver()
     }
+
     private fun setUpObserver() {
         viewModel.getUsers().observe(this, Observer {
             when (it.status) {
@@ -71,12 +72,11 @@ class SeriesNetworkCallActivity : AppCompatActivity() {
                 ApiHelperImpl(RetrofitBuilder.apiService),
                 DatabaseHelperImpl(DatabaseBuilder.getInstance(applicationContext))
             )
-        ).get(SeriesNetworkCallViewModel::class.java)
+        ).get(ExceptionHandlerViewModel::class.java)
     }
 
     private fun renderList(users: List<ApiUser>) {
         adapter.addData(users)
         adapter.notifyDataSetChanged()
     }
-
 }

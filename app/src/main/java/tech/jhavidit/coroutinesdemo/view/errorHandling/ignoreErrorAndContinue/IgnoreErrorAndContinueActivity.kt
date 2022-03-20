@@ -1,4 +1,4 @@
-package tech.jhavidit.coroutinesdemo.view.seriesNetworkCall
+package tech.jhavidit.coroutinesdemo.view.errorHandling.ignoreErrorAndContinue
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -20,8 +20,8 @@ import tech.jhavidit.coroutinesdemo.util.ViewModelFactory
 import tech.jhavidit.coroutinesdemo.view.adapter.ApiUserAdapter
 import tech.jhavidit.coroutinesdemo.view.parallelNetworkCall.ParallelNetworkCallViewModel
 
-class SeriesNetworkCallActivity : AppCompatActivity() {
-    private lateinit var viewModel: SeriesNetworkCallViewModel
+class IgnoreErrorAndContinueActivity : AppCompatActivity() {
+    private lateinit var viewModel: IgnoreErrorAndContinueViewModel
     private lateinit var adapter: ApiUserAdapter
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -71,12 +71,11 @@ class SeriesNetworkCallActivity : AppCompatActivity() {
                 ApiHelperImpl(RetrofitBuilder.apiService),
                 DatabaseHelperImpl(DatabaseBuilder.getInstance(applicationContext))
             )
-        ).get(SeriesNetworkCallViewModel::class.java)
+        ).get(IgnoreErrorAndContinueViewModel::class.java)
     }
 
     private fun renderList(users: List<ApiUser>) {
         adapter.addData(users)
         adapter.notifyDataSetChanged()
     }
-
 }

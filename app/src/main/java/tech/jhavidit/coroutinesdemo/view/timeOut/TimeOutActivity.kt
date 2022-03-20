@@ -1,4 +1,4 @@
-package tech.jhavidit.coroutinesdemo.view.seriesNetworkCall
+package tech.jhavidit.coroutinesdemo.view.timeOut
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -20,9 +20,10 @@ import tech.jhavidit.coroutinesdemo.util.ViewModelFactory
 import tech.jhavidit.coroutinesdemo.view.adapter.ApiUserAdapter
 import tech.jhavidit.coroutinesdemo.view.parallelNetworkCall.ParallelNetworkCallViewModel
 
-class SeriesNetworkCallActivity : AppCompatActivity() {
-    private lateinit var viewModel: SeriesNetworkCallViewModel
+class TimeOutActivity : AppCompatActivity() {
     private lateinit var adapter: ApiUserAdapter
+    private lateinit var viewModel: TimeOutViewModel
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_recycler_view)
@@ -30,6 +31,7 @@ class SeriesNetworkCallActivity : AppCompatActivity() {
         initAdapter()
         setUpObserver()
     }
+
     private fun setUpObserver() {
         viewModel.getUsers().observe(this, Observer {
             when (it.status) {
@@ -47,7 +49,7 @@ class SeriesNetworkCallActivity : AppCompatActivity() {
                 }
                 Status.ERROR -> {
                     progressBar.visibility = View.GONE
-                    Toast.makeText(this, "${it.data}", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, "${it.message}", Toast.LENGTH_SHORT).show()
                 }
             }
         })
@@ -71,12 +73,13 @@ class SeriesNetworkCallActivity : AppCompatActivity() {
                 ApiHelperImpl(RetrofitBuilder.apiService),
                 DatabaseHelperImpl(DatabaseBuilder.getInstance(applicationContext))
             )
-        ).get(SeriesNetworkCallViewModel::class.java)
+        ).get(TimeOutViewModel::class.java)
     }
 
     private fun renderList(users: List<ApiUser>) {
         adapter.addData(users)
         adapter.notifyDataSetChanged()
     }
+
 
 }

@@ -22,33 +22,33 @@
             android:text="Single Network Call"
             android:textColor="@android:color/white" />
 
-        <!--        <Button-->
-        <!--            android:layout_width="match_parent"-->
-        <!--            android:layout_height="wrap_content"-->
-        <!--            android:onClick="startSeriesNetworkCallsActivity"-->
-        <!--            android:text="@string/series_network_calls"-->
-        <!--            android:textColor="@android:color/black" />-->
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="startSeriesNetworkCallsActivity"
+            android:text="Series Network Call"
+            android:textColor="@android:color/white" />
 
-        <!--        <Button-->
-        <!--            android:layout_width="match_parent"-->
-        <!--            android:layout_height="wrap_content"-->
-        <!--            android:onClick="startParallelNetworkCallsActivity"-->
-        <!--            android:text="@string/parallel_network_calls"-->
-        <!--            android:textColor="@android:color/black" />-->
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="startParallelNetworkCallsActivity"
+            android:text="Parallel Network Call"
+            android:textColor="@android:color/white" />
 
-        <!--        <Button-->
-        <!--            android:layout_width="match_parent"-->
-        <!--            android:layout_height="wrap_content"-->
-        <!--            android:onClick="startRoomDatabaseActivity"-->
-        <!--            android:text="@string/room_database"-->
-        <!--            android:textColor="@android:color/black" />-->
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="startRoomDatabaseActivity"
+            android:text="Room Database"
+            android:textColor="@android:color/white" />
 
-        <!--        <Button-->
-        <!--            android:layout_width="match_parent"-->
-        <!--            android:layout_height="wrap_content"-->
-        <!--            android:onClick="startTimeoutActivity"-->
-        <!--            android:text="@string/timeout"-->
-        <!--            android:textColor="@android:color/black" />-->
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="startTimeoutActivity"
+            android:text="Time Out Network Call"
+            android:textColor="@android:color/white" />
 
         <!--        <Button-->
         <!--            android:layout_width="match_parent"-->
@@ -57,33 +57,33 @@
         <!--            android:text="@string/try_catch_error"-->
         <!--            android:textColor="@android:color/black" />-->
 
-        <!--        <Button-->
-        <!--            android:layout_width="match_parent"-->
-        <!--            android:layout_height="wrap_content"-->
-        <!--            android:onClick="startExceptionHandlerActivity"-->
-        <!--            android:text="@string/exception_handler"-->
-        <!--            android:textColor="@android:color/black" />-->
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="startExceptionHandlerActivity"
+            android:text="Exception Handler Activity"
+            android:textColor="@android:color/white" />
 
-        <!--        <Button-->
-        <!--            android:layout_width="match_parent"-->
-        <!--            android:layout_height="wrap_content"-->
-        <!--            android:onClick="startIgnoreErrorAndContinueActivity"-->
-        <!--            android:text="@string/ignore_error_and_continue"-->
-        <!--            android:textColor="@android:color/black" />-->
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="startIgnoreErrorAndContinueActivity"
+            android:text="Ignore Error And Continue Activity"
+            android:textColor="@android:color/white" />
 
-        <!--        <Button-->
-        <!--            android:layout_width="match_parent"-->
-        <!--            android:layout_height="wrap_content"-->
-        <!--            android:onClick="startLongRunningTaskActivity"-->
-        <!--            android:text="@string/long_running_task"-->
-        <!--            android:textColor="@android:color/black" />-->
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="startLongRunningTaskActivity"
+            android:text="Long running one task activity"
+            android:textColor="@android:color/white" />
 
-        <!--        <Button-->
-        <!--            android:layout_width="match_parent"-->
-        <!--            android:layout_height="wrap_content"-->
-        <!--            android:onClick="startTwoLongRunningTasksActivity"-->
-        <!--            android:text="@string/two_long_running_tasks"-->
-        <!--            android:textColor="@android:color/black" />-->
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="startTwoLongRunningTasksActivity"
+            android:text="Long Running Two Task Activity"
+            android:textColor="@android:color/white" />
 
     </LinearLayout>
 </ScrollView>
